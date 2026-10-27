@@ -1,0 +1,26 @@
+{
+  "_comment": "Program/category mapping. Each rule is a lowercase RE2 regex matched against '<video title> | <all playlist names of the video>'. The rule with the lowest priority number wins. 'program' may be null: the video's main playlist name is then used as the program. After editing, redeploy (scripts/deploy.sh); the next run reloads the rules and every view is re-categorised, including historical data.",
+  "default_category": "Other",
+  "rules": [
+    {"priority": 10, "category": "Dream Star",    "program": "Derana Dream Star",        "pattern": "dream\\s*star"},
+
+    {"priority": 20, "category": "Sports",        "program": null,                       "pattern": "\\bsports?\\b|cricket|rugby|football|volleyball|athletic|\\bt20\\b|\\bodi\\b|\\blpl\\b|asia cup|world cup|රීඩා|කිකට්|ක්‍රිකට්"},
+
+    {"priority": 30, "category": "News",          "program": "Derana 360",               "pattern": "\\b360\\b"},
+    {"priority": 31, "category": "News",          "program": "Derana Aruna",             "pattern": "\\baruna\\b|අරුණ"},
+    {"priority": 32, "category": "News",          "program": "Wada Pitiya",              "pattern": "wada\\s*pitiya|වාද\\s*පිටිය"},
+    {"priority": 39, "category": "News",          "program": "Ada Derana News",          "pattern": "\\bnews\\b|පුවත්|වෘත්ති|headlines|breaking|current affairs|செய்தி"},
+
+    {"priority": 40, "category": "Reality shows", "program": "Derana Little Star",       "pattern": "little\\s*star"},
+    {"priority": 41, "category": "Reality shows", "program": "Derana 60 Plus",           "pattern": "60\\s*plus"},
+    {"priority": 42, "category": "Reality shows", "program": "Derana City of Dance",     "pattern": "city\\s*of\\s*dance"},
+    {"priority": 43, "category": "Reality shows", "program": "Derana Star City",         "pattern": "star\\s*city"},
+    {"priority": 44, "category": "Reality shows", "program": "Derana Champion Stars",    "pattern": "champion\\s*stars?"},
+    {"priority": 45, "category": "Reality shows", "program": "Derana Miss Sri Lanka",    "pattern": "miss\\s*sri\\s*lanka"},
+    {"priority": 49, "category": "Reality shows", "program": null,                       "pattern": "reality|grand\\s*finale|audition|semi\\s*final|\\bfinal\\b"},
+
+    {"priority": 50, "category": "Entertainment", "program": "Derana Film Awards",       "pattern": "film\\s*awards"},
+    {"priority": 51, "category": "Entertainment", "program": "Derana Music Video Awards","pattern": "music\\s*video\\s*awards"},
+    {"priority": 59, "category": "Entertainment", "program": null,                       "pattern": "teledrama|ටෙලි|episode|\\bep\\s*\\d|කථාංග|comedy|music|song|\\bgee\\b|ගී|cookout|smart kitchen|travel with|dishum|ගමේ රස|derana junior|kids|cartoon|movie|film|drama|trailer|promo|interview|talk show|musical"}
+  ]
+}

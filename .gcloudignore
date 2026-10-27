@@ -1,0 +1,18 @@
+# Files NOT uploaded to Cloud Build / Cloud Run
+.env
+.env.*
+!.env.example
+.git/
+.gitignore
+.venv/
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+tests/
+docs/
+scripts/
+*.md
+pytest.ini
+requirements-dev.txt
+ruff.toml
